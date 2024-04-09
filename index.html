@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        @font-face {
+            font-family: myfont1;
+            src: url(gowtext1.ttf);
+            }
+        @font-face {
+            font-family: myfont2;
+            src: url(gowtext2.TTF);
+        }
+        nav{
+            padding: 0px 10px;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            color: transparent;
+            position: absolute ;
+            width: 100%;  
+        }
+        .logo{
+            margin-right: -8vmin;
+            margin-bottom: 5vmin;
+            margin-left: 6vmin;
+        }
+        .logoimg{
+            width: 28vmin;
+            height: 15vmin;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0px 20px;
+            display: flex;
+            font-family:myfont1;
+        }
+        nav li{
+            margin-right: 6vmin;
+            margin-left: 10vmin;
+            margin-top: 3vmin;
+        }
+        nav a{
+            font-size: 3vmin;
+            margin-right: 5vmin;
+            text-decoration: none;
+            color: #ADD8E6;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        img{
+            width: 100%;
+            display: flex;
+        }
+       
+        nav a:hover{
+            color: white;
+        }
+        
+        .hover-line::after{
+            content: '';
+            display: block;
+            width: 0%;
+            height: 5%;
+            background-color: skyblue;
+            transition: width 0.3s;
+        }
+        .hover-line:hover:after{
+            width: 100%;
+            transition: width 0.3s;
+        }
+        .download{
+            margin-right: 3vmin;
+            font-size: 30px;
+            margin-bottom: 2vmin;
+            
+        }
+        .downloadbtn{
+            font-family: myfont1;
+            transition:  0.3s ease-in-out;
+            color: white;
+            border: 5px solid white;
+            border-radius: 20px;
+            padding: 3px 25px;
+            margin-right: 5vmin;
+        }
+        .downloadbtn:hover{
+            color: #ADD8E6;
+            background-color: white ;
+        }
+        .text1{
+            text-align: justify;
+            font-size: 50px;
+            color: whitesmoke;
+            bottom: 20%;
+            left: 36%;
+            right: 0;
+            position: absolute;
+            transform: translateX(-50%);
+            font-family:myfont2
+        }
+        .text2{
+            text-align: justify;
+            font-size: 20px;
+            color: whitesmoke;
+            top: 80vmin;
+            bottom: 1vmin;
+            left: 9vmin;
+            position: absolute;
+            font-family: sans-serif;
+        }
+       
+        .img2{
+            position: relative;
+        }
+        .img2 .text3{
+            text-decoration: underline;
+            position:absolute;
+            bottom: 88vmin;
+            left: 68%;
+            color: antiquewhite;
+            font-size: 30px;
+            text-align: center;
+            font-family: myfont1;
+        }
+        .img2 .text4{
+            position:absolute;
+            bottom: 18vmin;
+            left: 52%;
+            color: antiquewhite;
+            font-size: 20px;
+            text-align: center;
+            font-family: myfont1;
+        }
+        .img3{
+            position: relative;
+        }
+        .img3 .text5{
+            position:absolute;
+            bottom: 35vmin;
+            left: 28%;
+            color: antiquewhite;
+            font-size: 50px;
+            text-align: center;
+            font-family: myfont1;
+        }
+        .img4{
+            position: relative;
+        }
+        .img4 .text6{
+            text-decoration: underline;
+            position:absolute;
+            bottom: 100vmin;
+            left: 27%;
+            color: #ADD8E6  ;
+            font-size: 40px;
+            text-align: center;
+            font-family: myfont1;
+        }
+
+        .ss1 img{
+            position: absolute;
+            align-items: center;
+            bottom: 40%;
+            display: flex;
+            width: 30%;
+            left: 2%;
+            border-radius: 20px;
+            box-shadow: 0 0 10px  #ADD8E6;
+        }
+        .ss1 .ss2{
+            display: flex;
+            left: 35%;
+            bottom: 40%;
+            width: 30%;
+            border-radius: 20px;
+            box-shadow: 0 0 10px #ADD8E6;
+        }
+        .ss1 .ss3{
+            display: flex;
+            left: 68%;
+            bottom: 40%;
+            width: 30%;
+            border-radius: 20px;
+            box-shadow: 0 0 10px #ADD8E6;
+        }
+        .img4 .text7{
+            text-decoration: underline;
+            position:absolute;
+            bottom: 30%;
+            left: 3%;
+            color: whitesmoke  ;
+            font-size: 30px;
+            font-family: myfont1;
+        }
+        .img4 .text8{
+            text-decoration: none;
+            position:absolute;
+            bottom: 12%;
+            left: 3%;
+            color: whitesmoke  ;
+            font-size: 14.5px;
+            font-family: myfont1;
+        }
+        .img4 .text9{
+            text-decoration: underline;
+            position:absolute;
+            bottom: 30%;
+            left: 35%;
+            color: whitesmoke  ;
+            font-size: 30px;
+            font-family: myfont1; 
+        }
+        .img4 .text10{
+            text-decoration: none;
+            position: absolute;
+            left: 35%;
+            bottom: 12.5%;
+            color: whitesmoke;
+            font-size: 14.5px;
+            font-family: myfont1;
+        }
+        .img4 .text11{
+            text-decoration: underline;
+            position:absolute;
+            bottom: 30%;
+            left: 68%;
+            color: whitesmoke  ;
+            font-size: 30px;
+            font-family: myfont1;
+        }
+        .img4 .text12{
+            text-decoration: none;
+            position: absolute;
+            left: 68%;
+            bottom: 15.5%;
+            color: whitesmoke;
+            font-size: 14.5px;
+            font-family: myfont1;
+        }
+        @media screen and (max-width: 600px)
+        {
+        
+        .logo{ 
+            margin-top: 2vmin;
+            margin-left: 3vmin;
+        } 
+        .logoimg{
+            width: 7vmin;
+            height: 4vmin;
+        }
+        nav ul{
+            margin-left: 2vmin;
+        }
+         nav li{
+            margin-bottom: 2vmin;
+            margin-right:0vmin;
+            margin-left:6vmin;
+        } 
+        nav a{
+            font-size: 1vmin;
+        }
+        img{
+            width: 100%;
+            display: flex;
+        }
+        .download{
+            margin-bottom: 3.5vmin;
+            font-size: 4px;
+        }
+        .downloadbtn{
+            margin-right: 4vmin;
+            border: 1px solid;
+            padding: 0px 5px;
+        }
+        .text1{
+            font-size: 13px;
+            top: 8%;
+            bottom: 0%;
+            left: 39%;
+            right: 0;
+        }
+        .text2{
+            font-size:4.5px;
+            top: 38vmin;
+            bottom: 1vmin;
+            left: 9vmin;
+        }
+        .img2 .text3{
+            bottom: 43vmin;
+            left: 59%;
+            font-size: 14px;
+        }
+        .img2 .text4{
+            bottom: 11vmin;
+            left: 48%;
+            font-size: 5.5px;
+        }
+        .img3 .text5{
+            bottom: 16vmin;
+            left: 30%;
+            font-size: 14px;
+        }
+        .img4 .text6{
+            bottom: 45vmin;
+            left: 20%;
+            font-size: 14px;
+        }
+
+        .ss1 img{
+            width: 30%;
+            bottom: 40%;
+            left: 2%;
+            border-radius: 5px;
+            box-shadow: 0 0 3px  #ADD8E6;
+        }
+        .ss1 .ss2{
+            width: 30%;
+            left: 35%;
+            bottom: 40%;
+            border-radius: 5px;
+            box-shadow: 0 0 3px #ADD8E6;
+        }
+        .ss1 .ss3{
+            width: 30%;
+            left: 68%;
+            bottom: 40%;
+            border-radius: 5px;
+            box-shadow: 0 0 3px #ADD8E6;
+        }
+        .img4 .text7{
+            bottom: 31.5%;
+            left: 3%;
+            font-size: 10px;
+        }
+        .img4 .text8{
+            bottom: 12%;
+            left: 3%;
+            font-size: 3.5px;
+        }
+        .img4 .text9{
+            bottom: 31.5%;
+            left: 35%;
+            font-size: 10px;
+        }
+        .img4 .text10{
+            left: 35%;
+            bottom: 13%;
+            font-size: 3.5px;
+        }
+        .img4 .text11{
+            bottom: 31.5%;
+            left: 68%;
+            font-size: 10px;
+        }
+        .img4 .text12{
+            left: 68%;
+            bottom: 17%;
+            font-size: 3.5px;
+        }
+        }
+    
+</style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="God-Of-War-Ragnarok-Logo-PNG-File.png" alt="" class="logoimg">
+        </div>
+        <ul>
+            <li><a href="" class="hover-line">Games</a></li>
+            <li><a href="" class="hover-line">Reviews</a></li>
+            <li><a href="" class="hover-line">Chat</a></li>
+            <li><a href="" class="hover-line">Faq</a></li>
+        </ul>
+        <div class="download">
+            <a href="" class="downloadbtn">Download</a>
+        </div>
+        
+    </nav>
+    <div class="img1">
+    <img src="gow wn.jpg" alt="">
+     <p class="text1">
+        Embark on an epic and<br>heartfelt journey as<br>Kratos and Atreus<br>struggle with holding<br>on and letting go
+     </p>
+     <p class="text2">
+        From Santa Monica Studio comes the sequel to the critically acclaimed<br>God of War (2018). Fimbulwinter is well underway. Kratos and Atreus must<br>journey to each of the Nine Realms in search of answers as Asgardian<br>forces prepare for a prophesied battle that will end the world. Along the<br>way they will explore stunning, mythical landscapes, and face fearsome<br>enemies in the form of Norse gods and monsters. The threat of Ragnarök<br>
+     </p>
+    </div>
+     <div class="img2">
+        <img src="atreus2.jpg" alt="">
+        <p class="text3">
+            Introduction
+        </p>
+         <p class="text4">
+            God of War: Ragnarök is the sequel to God of War (2018). <br>Although originally scheduled for a release in 2021, on May<br>3, 2021, Santa Monica announced that it had been delayed<br>to 2022 due to the pandemic and Christopher Judge's<br>health problems. According to Santa Monica Studios, God of<br>War Ragnarök is the last installment in the Norse Era. This<br>centers on Kratos, the God of War, and his now teenage son,<br>Atreus, who are facing the conflict of the upcoming<br>Ragnarök, due to the result of Kratos killing Norse God,<br>Baldur, while setting on their to end tyranny reign of Odin,<br>King of Asgard and while focusing off Atreus, who tries to<br>uncover his origins. The game was released on November 9,<br>2022 for PlayStation 4 and PlayStation 5. A free DLC, titled<br>Valhalla, was released on December 12, 2023.
+         </p>
+     </div>
+     <div class="img3">
+        <img src="hero-image.webp" alt="">
+        <p class="text5">
+            THE GREATEST HEROES FROM<br>ACROSS NINE REALMS,<br>FIGHTING FOR A FUTURE THEY<br>BELIEVE IN
+        </p>
+     </div>
+     <div class="img4">
+        <img src="black wave.jpg" alt="">
+        <p class="text6">
+            THE NORSE SAGA CONTINUES
+        </p>
+        <div class="ss1">
+            <img src="ss1.jpg_large" alt="">
+            <img src="ss2.webp" alt="" class="ss2">
+            <img src="ss3.avif" alt="" class="ss3">
+        </div>
+        <p class="text7">
+            A future, unwritten
+            <p class="text8">
+                Atreus seeks knowledge to help him understand the<br>prophecy of “Loki” and establish his role in Ragnarök.<br>Kratos must decide whether he will be chained by the<br>fear of repeating his mistakes or break free of his past to<br>be the father Atreus needs.
+            </p>
+            <p class="text9">
+                Instruments of war
+            </p>
+            <p class="text10">
+                The Leviathan Axe, Blades of Chaos and Guardian Shield<br>return alongside a host of new abilities for both Kratos<br>and Atreus. Kratos’ deadly Spartan skills will be tested<br>like never before as he battles gods and monsters<br>across Nine Realms to protect his family.
+            </p>
+            <p class="text11">
+                Explore vast realms
+            </p>
+            <p class="text12">
+                Journey through dangerous and stunning landscapes<br>while facing a wide variety of enemy creatures,<br>monsters and Norse gods as Kratos and Atreus search<br>for answers.
+            </p>
+        </p>
+        
+        
+     </div>
+</body>
+</html>
